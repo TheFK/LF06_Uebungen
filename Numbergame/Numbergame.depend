@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1602065379 source:/home/florian/workspace/Numbergame/main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<stdlib.h>
+

@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1600149570 source:/home/florian/workspace/temperature_calculator/Temperature_Calculator/main.cpp
+	<iostream>
+

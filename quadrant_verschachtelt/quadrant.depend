@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1600329232 source:/home/florian/workspace/quadrant/main.cpp
+	<iostream>
+	<string.h>
+
+1600330241 source:/home/florian/workspace/quadrant/main_verschachtelt.cpp
+	<iostream>
+	<string.h>
+
