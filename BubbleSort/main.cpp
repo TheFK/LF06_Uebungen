@@ -56,28 +56,33 @@ void startMainMenu(){
     int arr_size;
     cin >> arr_size;
 
-    int numbers[arr_size];
+    int bubble_numbers[arr_size];
+    int selection_numbers[arr_size];
+    int insertion_numbers[arr_size];
     for(int i = 0; i < arr_size; i++){
-        numbers[i] = rand() % 100000 + 1; ;
+        int rand_number = rand() % 100000 + 1;
+        bubble_numbers[i] = rand_number;
+        selection_numbers[i] = rand_number;
+        insertion_numbers[i] = rand_number;
     }
 
     auto bubble_start = std::chrono::high_resolution_clock::now();
-    int *bubble_sorted = numbers;
-    bubble_sorted = bubbleSort(bubble_sorted, arr_size);
+    int *bubble_sorted;
+    bubble_sorted = bubbleSort(bubble_numbers, arr_size);
     auto bubble_finish = std::chrono::high_resolution_clock::now();
 
     std::chrono::duration<double> bubble_time = bubble_finish - bubble_start;
 
     auto selection_start = std::chrono::high_resolution_clock::now();
-    int *selection_sorted = numbers;
-    selection_sorted = selectionSort(selection_sorted, arr_size);
+    int *selection_sorted;
+    selection_sorted = selectionSort(selection_numbers, arr_size);
     auto selection_finish = std::chrono::high_resolution_clock::now();
 
     std::chrono::duration<double> selection_time = selection_finish - selection_start;
 
     auto insertion_start = std::chrono::high_resolution_clock::now();
-    int *insertion_sorted = numbers;
-    insertion_sorted = insertionSort(insertion_sorted, arr_size);
+    int *insertion_sorted;
+    insertion_sorted = insertionSort(insertion_numbers, arr_size);
     auto insertion_finish = std::chrono::high_resolution_clock::now();
 
     std::chrono::duration<double> insertion_time = insertion_finish - insertion_start;
