@@ -35,6 +35,12 @@ function getMysqlConnection(){
     return $mysqli;
 }
 
+function getDataBaseCredentials(){
+    $credentials = json_decode(file_get_contents("credentials.json"), true);
+    
+    return $credentials;
+}
+
 function addCar(){
     $mysqli = getMysqlConnection();
 
@@ -51,72 +57,4 @@ function addCar(){
     $response["msg"] = "OK";
 
     return json_encode($response);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function getDataBaseCredentials(){
-    return [
-        "user" => "fklein",
-        "password" => "U1l2i345",
-        "name" => "fklein"
-    ];
 }
