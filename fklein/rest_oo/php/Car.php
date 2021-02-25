@@ -8,8 +8,8 @@ class Car{
     private int $year = null;
     private bool $in_database = false;
 
-    function __construct($brand = null, $model = null, $color = null, $year = null){
-        $this->id = null;
+    function __construct($id = null, $brand = null, $model = null, $color = null, $year = null){
+        $this->id = $id;
         $this->brand = $brand;
         $this->model = $model;
         $this->color = $color;

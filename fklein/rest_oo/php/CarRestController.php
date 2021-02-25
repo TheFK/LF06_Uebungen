@@ -10,8 +10,10 @@ function ajax(){
         switch($action){
             case 'add':
                 return addCar();
-            case 'delete':
-                return deleteCar();
+            case 'getAll':
+                return getAllCars();
+            // case 'delete':
+            //     return deleteCar();
         }
     }
     else{
@@ -53,7 +55,25 @@ function addCar(){
     return json_encode($response);
 }
 
+function getAllCars(){
+    $mysqli = getMysqlConnection();
+    $query = "SELECT * FROM template_entry;";
 
+    $result = $mysqli->query($query);
+    $cars = $result->fetch_all(MYSQLI_ASSOC);
+    $mysqli->close();
+
+    $car_array = [];
+
+    if($cars != false){
+        foreach($cars as $car){
+            $car_obj = new Car($car["id"], $car["brand"], $car["model"], $car["color"], $car["year"]);
+            $car_array[] = $car_obj->getRestFields();
+        }
+    }
+
+    return json_encode($car_array);
+}
 
 
 
