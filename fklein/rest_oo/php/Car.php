@@ -1,11 +1,11 @@
 <?php
 
 class Car{
-    private int $id = null;
-    private string $brand = null;
-    private string $model = null;
-    private string $color = null;
-    private int $year = null;
+    private ?int $id = null;
+    private ?string $brand = null;
+    private ?string $model = null;
+    private ?string $color = null;
+    private ?int $year = null;
     private bool $in_database = false;
 
     function __construct($id = null, $brand = null, $model = null, $color = null, $year = null){
@@ -95,5 +95,7 @@ class Car{
                 "VALUES ('" . $brand . "', '" . $model . "', '" . $color . "', " . $year . ")"
             );
         }
+
+        $this->in_database = true;
     }
 }

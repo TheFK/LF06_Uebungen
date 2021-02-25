@@ -1,5 +1,5 @@
 <?php
-
+include "Car.php";
 ajax();
 
 //Start
@@ -9,9 +9,11 @@ function ajax(){
 
         switch($action){
             case 'add':
-                return addCar();
+                echo addCar();
+                break;
             case 'getAll':
-                return getAllCars();
+                echo getAllCars();
+                break;
             // case 'delete':
             //     return deleteCar();
         }
@@ -20,7 +22,7 @@ function ajax(){
         $error = [];
         $error["msg"] = "Unknown Action";
         $error["code"] = 500;
-        return json_encode($error);
+        echo json_encode($error);
     }
 }
 
@@ -63,7 +65,7 @@ function addCar(){
 
 function getAllCars(){
     $mysqli = getMysqlConnection();
-    $query = "SELECT * FROM template_entry;";
+    $query = "SELECT * FROM car;";
 
     $result = $mysqli->query($query);
     $cars = $result->fetch_all(MYSQLI_ASSOC);
