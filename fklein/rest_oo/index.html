@@ -16,15 +16,16 @@
                     <b>Auto hinzufuegen:</b><br>
                     <br>
                     <table width="50%">
-                        <tr><td>Marke:</td> <td><input type="text" name="brand"></td></tr>
-                        <tr><td>Modell:</td> <td><input type="text" name="model"></td></tr>
-                        <tr><td>Farbe:</td> <td><input type="color" name="brand"></td></tr>
-                        <tr><td>Baujahr:</td> <td><input type="number" name="brand"></td></tr>
+                        <tr><td>Marke:</td> <td><input type="text" id="brand" name="brand"></td></tr>
+                        <tr><td>Modell:</td> <td><input type="text" id="model" name="model"></td></tr>
+                        <tr><td>Farbe:</td> <td><input type="color" id="color" name="color"></td></tr>
+                        <tr><td>Baujahr:</td> <td><input type="number" id="year" name="year"></td></tr>
                     </table>
                     <br>
-                    <button onclick="addFromForm()">Hinzufuegen</button>
                 </form>
+                <button onclick="addFromForm()">Hinzufuegen</button>
             </div><br>
+            <center><button onclick="loadList()">Aktualisieren</button></center>
             <div id="list">
 
             </div>

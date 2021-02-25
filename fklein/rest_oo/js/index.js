@@ -30,5 +30,24 @@ function loadList(){
 }
 
 function addFromForm(){
+    var form_data = '{ ' +
+        '"brand":"' + $("#brand").val() + '", ' +
+        '"model":"' + $("#model").val() + '", ' +
+        '"color":"' + $("#color").val() + '", ' +
+        '"year":"' + $("#year").val() + '"' +
+    ' }';
 
+    // var car = JSON.parse(form_data);
+
+    $.ajax({
+        'url' : 'http://fklein.bplaced.net/rest_oo/php/CarRestController.php',
+        'type' : 'POST',
+        'data' : {
+            'action' : 'add',
+            'data' : form_data
+        },
+        'success' : function(data) {
+            loadList();
+        }
+    });
 }
