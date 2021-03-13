@@ -39,11 +39,21 @@ button {
     border-radius: 10px;
 }
 
-.car{
-    margin: 20 100 20 100;
-    padding: 10 10 10 10;
+#list{
+    transition: 1s;
+}
+
+.cars{
+    width: 100%;
+    margin: 20 0 20 0;
+    padding: 0 10 0 10;
     background-color: #3f3f3f;
     border-radius: 10px;
+}
+
+.cars td{
+    padding: 10 0 10 0;
+    border-bottom: 1px solid #2c2c2c;
 }
 
 .color{
