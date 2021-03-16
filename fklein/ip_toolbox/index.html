@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>TGBBZ1 FA/FS11.4Q - IP-Toolbox</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <table id="structure" width="100%">
+            <tr id="headerrow">
+                <td id="logo" width="15%">
+                    <center><a href="/index.html">Zurueck zur Auswahl</a></center>
+                </td>
+                <td id="title">
+                    <h1>TGBBZ1 FA/FS11.4Q - IP-Toolbox</h1>
+                </td>
+            </tr>
+            <tr id="contentrow">
+                <td id="navigation" width="25%">
+                    <div id="search_form">
+                        IP-Typ:
+                        <select id="ip_type" name="ip_type">
+                            <option value="decimal">Dezimal</option>
+                            <option value="binary">Binär</option>
+                        </select><br>
+                        <br>
+                        IP:<br>
+                        <div id="decimal">
+                            <input id="decimal_input_1" class="decimal_input" type="number">.
+                            <input id="decimal_input_2" class="decimal_input" type="number">.
+                            <input id="decimal_input_3" class="decimal_input" type="number">.
+                            <input id="decimal_input_4" class="decimal_input" type="number">
+                        </div>
+                    </div>
+                </td>
+
+                <td id="content" width="75%">
+                    <div id="contentbox">
+                        <h2>IP-Informationen</h2><br>
+                        <table>
+                            <tr>
+                                <td>
+                                    Dezimal:
+                                </td>
+                                <td>
+                                    <span id="ip_decimal"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Binär:
+                                </td>
+                                <td>
+                                    <span id="ip_binary"></span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <script src="js/toolbox.js" type="text/javascript"></script>
+    </body>
+</html>
