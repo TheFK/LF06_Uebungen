@@ -15,13 +15,8 @@
                 </td>
             </tr>
             <tr id="contentrow">
-                <td id="navigation" width="25%">
+                <td id="navigation" width="23%">
                     <div id="search_form">
-                        IP-Typ:
-                        <select id="ip_type" name="ip_type">
-                            <option value="decimal">Dezimal</option>
-                            <option value="binary">Binär</option>
-                        </select><br>
                         <br>
                         IP:<br>
                         <div id="decimal">
@@ -33,24 +28,40 @@
                     </div>
                 </td>
 
-                <td id="content" width="75%">
+                <td id="content" width="77%">
                     <div id="contentbox">
                         <h2>IP-Informationen</h2><br>
                         <table>
                             <tr>
                                 <td>
-                                    Dezimal:
+                                    <b>Dezimal:</b>
                                 </td>
                                 <td>
-                                    <span id="ip_decimal"></span>
+                                    <i><span id="ip_decimal"></span></i>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    Binär:
+                                    <b>Binär:</b>
                                 </td>
                                 <td>
-                                    <span id="ip_binary"></span>
+                                    <i><span id="ip_binary"></span></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Hexadezimal:</b>
+                                </td>
+                                <td>
+                                    <i><span id="ip_hexadecimal"></span></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Klasse:</b>
+                                </td>
+                                <td>
+                                    <i><span id="ip_class"></span></i>
                                 </td>
                             </tr>
                         </table>

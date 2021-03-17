@@ -39,6 +39,9 @@ a{
 h1{
     margin: 0;
 }
+h2{
+    margin: 0;
+}
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -92,6 +95,7 @@ h1{
     padding: 0;
     height: calc(100vh - 70px);
     color:#a1a1a1;
+    vertical-align: top;
 }
 #toolbar{
     height: 40px;
