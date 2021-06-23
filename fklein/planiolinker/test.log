@@ -1,0 +1,21 @@
+Post=Array
+(
+    [token] => K2KKpX3fLtFlXj0w5JwAIhKM
+    [team_id] => T01FBA879T4
+    [team_domain] => ibelsaworkspace
+    [channel_id] => D01UQ40HXR8
+    [channel_name] => directmessage
+    [user_id] => U01UHAKMJEA
+    [user_name] => florian.klein
+    [command] => /plan
+    [text] => 999
+    [api_app_id] => A022AB6P3CM
+    [is_enterprise_install] => false
+    [response_url] => https://hooks.slack.com/commands/T01FBA879T4/2087677742916/rd8qlXA6AxC9SmvvnJ5CGO3D
+    [trigger_id] => 2066743505639.1521348247922.c80b0c92e0a8e073ab9604100d82af88
+)
+
+POST=Array
+(
+)
+
