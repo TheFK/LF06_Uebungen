@@ -6,9 +6,16 @@
         <link rel="stylesheet" href="/secret_chat/style.css">
     </head>
     <body>
-        <div id="chat"></div>
+        <center>
+        <div id="chat_box">
+        <table id="chat">
+        </table>
+        </div>
         <br>
-        <input type="text" id="chat_sender"><br>
-        <input type="text" id="chat_message"><button id="chat_button" onclick="sendMessage()">Senden</button>
+        <br>
+        Name: <input type="text" id="chat_sender"><br>
+        <br>
+        Nachricht: <textarea id="chat_message"></textarea> <button id="chat_button" onclick="sendMessage()">Senden</button>
+        </center>
     </body>
 </html>

@@ -64,8 +64,8 @@ function read(){
 function write(){
     $mysqli = getMysqlConnection();
 
-    $sender = $_POST["sender"];
-    $message = $_POST["message"];
+    $sender = $mysqli->real_escape_string($_POST["sender"]);
+    $message = $mysqli->real_escape_string($_POST["message"]);
 
     $mysqli->query(
         "INSERT INTO chat_log (sender, text) " .
