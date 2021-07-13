@@ -18,7 +18,7 @@ if(isset($_POST["range"])){
     $range = $_POST["range"];
 }
 else{
-    $range = 5;
+    $range = 2;
 }
 
 for ($y = 0; $y < $height; $y++){
