@@ -32,24 +32,19 @@ function getNewMessages(){
             });
             $('#chat').append(html);
             
+            $("#connection_issues").css("left", "-300px");
+
             setTimeout(function() {
                 getNewMessages(); 
             }, 2500);
 
             if(data.length > 0){
                 last_time = data[data.length - 1]["time"];
+                $('#chat_box').animate({scrollTop: $('#chat_box').prop('scrollHeight')});
             }
-            $('#chat_box').animate({scrollTop: $('#chat_box').prop('scrollHeight')});
         },
         'error' : function(request,error) {
-            $('#chat').append(
-                "<tr><td>" + 
-                "</td>" +
-                "<td><b style='color:red;'>Verbindungsprobleme...</b></td>" +
-                "<td></td>" +
-                "</tr>"
-            );
-            $('#chat_box').animate({scrollTop: $('#chat_box').prop('scrollHeight')});
+            $("#connection_issues").css("left", "50vw");
 
             setTimeout(function() {
                 getNewMessages(); 

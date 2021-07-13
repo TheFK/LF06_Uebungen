@@ -68,6 +68,18 @@ function write(){
     $message = $mysqli->real_escape_string($_POST["message"]);
 
     $mysqli->query(
+        "DELETE FROM `chat_log`
+        WHERE id NOT IN (
+          SELECT id
+          FROM (
+            SELECT id
+            FROM `chat_log`
+            ORDER BY id DESC
+            LIMIT 50 -- keep this many records
+          ) foo
+        );"
+    );
+    $mysqli->query(
         "INSERT INTO chat_log (sender, text) " .
         "VALUES ('" . $sender . "', '" . $message . "')"
     );
